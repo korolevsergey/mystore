@@ -1,0 +1,25 @@
+.book_item {
+  text-align: center;
+  .price {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+.single-book {
+  .info {
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+  .price {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  .add-to-cart {
+    text-align: right;
+  }
+}
+
+textarea {
+  resize: vertical;
+}

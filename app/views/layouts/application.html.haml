@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bookstore
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  = render 'layouts/header'
+  .container
+    .row
+      .col-sm-9
+        = render 'layouts/message'
+        = yield
+      .col-sm-3
+        .list-group
+          - sidebar_categories.each do |category|
+            = link_to category.name, category, class: 'list-group-item'
+    = render 'layouts/footer'
